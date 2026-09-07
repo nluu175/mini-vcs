@@ -2,12 +2,9 @@
 
 ## Why this project
 
-Git internals (content-addressable storage, DAGs, hashing, tree structures) are
-real systems concepts, scoped small enough to build solo. Go is new to me —
-building this doubles as evidence I can ramp quickly on unfamiliar tech.
+Git internals (content-addressable storage, DAGs, hashing, tree structures) are real systems concepts, scoped small enough to build solo. Go is new to me — building this doubles as evidence I can ramp quickly on unfamiliar tech. 
 
-This is background/parallel prep work, not a priority over active job search.
-No fixed timeline — built in steps, whenever there's time for it.
+This is background/parallel prep work, not a priority over active job search. No fixed timeline — built in steps, whenever there's time for it.
 
 ## Scope (v1 — deliberately narrow)
 
@@ -17,8 +14,7 @@ No fixed timeline — built in steps, whenever there's time for it.
 4. `log` — walk the commit DAG backward
 5. `diff` — basic diff between two commits
 
-**Explicitly out of scope for v1:** branching, merging, remotes. These are
-where scope explodes and aren't needed for the core learning goal.
+**Explicitly out of scope for v1:** branching, merging, remotes. These are where scope explodes and aren't needed for the core learning goal.
 
 ## Object model decisions
 
@@ -45,14 +41,8 @@ where scope explodes and aren't needed for the core learning goal.
 
 ## Log
 
-Entries are short (3-5 sentences), written same-day, problem/why before how.
-Decisions get captured with what was considered and rejected, not just what
-was chosen. Anything that breaks, and what changed as a result, gets logged —
-that's the actual interview material.
+Entries are short (3-5 sentences), written same-day, problem/why before how. Decisions get captured with what was considered and rejected, not just what was chosen. Anything that breaks, and what changed as a result, gets logged — that's the actual interview material.
 
-### YYYY-MM-DD — Project started
+### 20260907 — Project started
 
-Scoped the object model on paper before writing any Go. Chose SHA-1 over
-SHA-256 to keep output comparable to real git. Deferred the flat-vs-nested
-storage layout decision to Step 1, when it'll actually matter.
-# mini-vcs
+Scoped the object model on paper before writing any Go. Chose SHA-1 over SHA-256 to keep output comparable to real git. Deferred the flat-vs-nested storage layout decision to Step 1, when it'll actually matter.
