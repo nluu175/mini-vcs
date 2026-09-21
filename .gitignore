@@ -1,0 +1,10 @@
+# Built binary (from `go build -o vcs .`)
+/vcs
+
+# Test/scratch repos created by running the tool (`.vcs/` is *our* .git equivalent,
+# generated output, not source)
+.vcs/
+
+# Go build/test artifacts
+*.test
+*.out
