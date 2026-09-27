@@ -13,15 +13,18 @@ func main() {
 		os.Exit(1)
 	}
 
-	var err error
-	switch os.Args[1] {
-	case "init":
-		err = commands.RunInit(os.Args[2:])
-	default:
-		err = fmt.Errorf("unknown command: %s", os.Args[1])
+	cmds := map[string]func([]string) error{
+		"init":        commands.RunInit,
+		"hash-object": commands.RunHashObject,
 	}
 
-	if err != nil {
+	run, ok := cmds[os.Args[1]]
+	if !ok {
+		fmt.Fprintf(os.Stderr, "unknown command: %s\n", os.Args[1])
+		os.Exit(1)
+	}
+
+	if err := run(os.Args[2:]); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
